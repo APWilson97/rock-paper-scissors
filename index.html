@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+function computerPlay () {
+    let choices = ['rock', 'paper', 'scissors'];
+    return choices[Math.floor(Math.random() * choices.length)];
+}
+
+function playRound (playerSelection, computerSelection) {
+    computerSelection = computerPlay();
+
+    if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'scissors' && computerSelection === 'paper') || (playerSelection === 'paper' && computerSelection === 'rock')) {
+       return 'You win!'
+    
+    } else if ((playerSelection === 'scissors' && computerSelection === 'rock') || (playerSelection === 'paper' && computerSelection === 'scissors') || (playerSelection === 'rock' && computerSelection === 'paper')) {
+        return 'You lose!'
+    } else {
+        return 'Tie!'
+    }
+}
+
+
+
+
+  </script>
+</body>
+</html>
