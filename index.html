@@ -12,20 +12,114 @@ function computerPlay () {
 }
 
 function playRound (playerSelection, computerSelection) {
-    computerSelection = computerPlay();
-
+playerSelection = playerSelection.toLowerCase();
     if ((playerSelection === 'rock' && computerSelection === 'scissors') || (playerSelection === 'scissors' && computerSelection === 'paper') || (playerSelection === 'paper' && computerSelection === 'rock')) {
-       return 'You win!'
+       return true;
     
     } else if ((playerSelection === 'scissors' && computerSelection === 'rock') || (playerSelection === 'paper' && computerSelection === 'scissors') || (playerSelection === 'rock' && computerSelection === 'paper')) {
-        return 'You lose!'
+        return false;
     } else {
-        return 'Tie!'
+        return 'Tie!';
     }
 }
 
+function game () {
+  let playerScore = 0;
+  let computerScore = 0;
+  let playerSelection = prompt ('Rock, paper or scissors?');
+  let computerSelection = computerPlay();
+  let winner = playRound (playerSelection, computerSelection);
 
+  if (winner === true) {
+    playerScore++;
+    console.log('Player won this round!');
+  } else if (winner === false) {
+    computerScore++; 
+    console.log('Computer won this round!');
+  } else {
+    console.log('Tie!');
+  }
+        
+let score = `Score: ${playerScore}, ${computerScore}`;
+console.log(score);
 
+playerSelection = prompt ('Rock, paper or scissors?');
+computerSelection = computerPlay();
+winner = playRound (playerSelection, computerSelection);
+
+if (winner === true) {
+  playerScore++;
+  console.log('Player won this round!');
+  } else if (winner=== false) {
+    computerScore++;
+    console.log('Computer won this round!'); 
+    } else {
+    console.log('Tie!');
+  }
+
+score = `Score: ${playerScore}, ${computerScore}`;
+console.log(score);
+
+playerSelection = prompt ('Rock, paper or scissors?');
+computerSelection = computerPlay();
+winner = playRound (playerSelection, computerSelection);
+
+if (winner === true) {
+  playerScore++;
+  console.log('Player won this round!');
+  } else if (winner === false) {
+    computerScore++;
+    console.log('Computer won this round!');  
+    } else {
+    console.log('Tie!');
+  }
+
+score = `Score: ${playerScore}, ${computerScore}`;
+console.log(score);
+
+playerSelection = prompt ('Rock, paper or scissors?');
+computerSelection = computerPlay();
+winner = playRound (playerSelection, computerSelection);
+
+if (winner === true) {
+  playerScore++;
+  console.log('Player won this round!');
+  } else if (winner === false) {
+    computerScore++; 
+    console.log('Computer won this round!');
+    } else {
+    console.log('Tie!');
+  }
+
+score = `Score: ${playerScore}, ${computerScore}`;
+console.log(score);
+
+playerSelection = prompt ('Rock, paper or scissors?');
+computerSelection = computerPlay();
+winner = playRound (playerSelection, computerSelection);
+
+if (winner === true) {
+  playerScore++;
+  console.log('Player won this round!');
+  } else if (winner === false) {
+    computerScore++; 
+    console.log('Computer won this round!');
+    } else {
+    console.log('Tie!');
+  }
+
+let finalScore = `Final Score: ${playerScore}, ${computerScore}`;
+console.log(finalScore);
+
+if (playerScore > computerScore) {
+  console.log('Congratulations! You win!');
+  } else if (computerScore > playerScore) {
+  console.log('Oh no! Sorry, better luck next time!');
+  } else {
+    console.log('Wow! A tie!');
+  }
+
+}
 
   </script>
 </body>
